@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans Thai', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* TH Sarabun IT๙ font family rules */
+.font-sarabun,
+.font-thaisarabun,
+#print-roster-area,
+#print-roster-area * {
+  font-family: "TH Sarabun IT9", "TH Sarabun IT๙", "TH Sarabun New", "TH Sarabun PSK", "Sarabun", "Noto Sans Thai", Tahoma, sans-serif !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Print Rules for A4 Landscape Document Printing */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 1cm !important;
+  }
+
+  html,
+  body,
+  #root,
+  main,
+  div,
+  section,
+  article,
+  table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    background: transparent !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  header,
+  nav,
+  .no-print,
+  #btn-sheet-settings,
+  #btn-switch-admin,
+  #btn-theme-toggle {
+    display: none !important;
+  }
+
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+
+  .print\:p-0 {
+    padding: 0 !important;
+  }
+
+  .print\:border-none {
+    border: none !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+

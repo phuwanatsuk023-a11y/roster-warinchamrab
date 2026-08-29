@@ -1,0 +1,6 @@
+{
+  "name": "ระบบจัดเวรยามสำนักงาน เทศบาลเมืองวารินชำราบ",
+  "description": "ระบบจัดตารางเวรยามสำนักงาน บันทึกและซิงก์ข้อมูลลง Google Sheets ผ่าน Google Apps Script API สำหรับเทศบาลเมืองวารินชำราบ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
